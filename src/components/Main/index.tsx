@@ -1,7 +1,9 @@
+import { Wrapper } from './styles'
+
 export const Main = () => {
   return (
-    <main>
+    <Wrapper>
       <h1>React avançado</h1>
-    </main>
+    </Wrapper>
   )
 }
