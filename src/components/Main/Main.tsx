@@ -1,14 +1,11 @@
-import { Description, Illustration, Logo, Title, Wrapper } from './styles'
+import React from 'react'
 
-interface MainProps {
-  title: string
-  description: string
-}
+import { Description, Illustration, Logo, Title, Wrapper } from './Main.styles'
 
 export const Main = ({
   title = 'React Avançado',
   description = 'Typescript, ReactJS, NextJS e Styled Components'
-}: MainProps) => {
+}) => {
   return (
     <Wrapper>
       <Logo

@@ -1,20 +1,25 @@
 import { render, screen } from '@testing-library/react'
-import { Main } from '.'
+import { Main } from './Main'
 
 describe('<Main />', () => {
   it('should render the heading', () => {
-    const { container } = render(<Main />) // renderiza o componente
+    // renderiza o component
+    const { container } = render(<Main />)
 
+    // busca o elemento e verifica a existência dele
     expect(
       screen.getByRole('heading', { name: /react avançado/i })
-    ).toBeInTheDocument() // verifica se o heading foi renderizado
+    ).toBeInTheDocument()
 
-    expect(container.firstChild).toMatchSnapshot() // snapshot
+    // gerar snapshot
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('should render the colors correctly', () => {
+    // renderiza o component
     const { container } = render(<Main />)
 
+    // verifica se o background-color está correto
     expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' })
   })
 })
